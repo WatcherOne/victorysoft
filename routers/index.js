@@ -7,8 +7,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/home', function(req, res){
-  res.render('home', {});
+router.get('/', function(req, res){
+  res.render('home', { title: '北京威胜通达' });
 })
 
 module.exports = router;
