@@ -1,0 +1,16 @@
+{
+  "name": "victorysoft",
+  "version": "1.0.0",
+  "description": "a company website",
+  "author": "zhubo <286154864@qq.com>",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11",
+    "path": "^0.12.7"
+  }
+}
