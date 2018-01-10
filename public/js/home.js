@@ -1,4 +1,4 @@
-var mySwiper = new Swiper('.swiper-container', {
+const mySwiper = new Swiper('#banner-container', {
 	autoplay: 4000,
 	speed: 500,
 	loop: true,
@@ -14,6 +14,19 @@ var mySwiper = new Swiper('.swiper-container', {
 	// 如果需要前进后退按钮
 	nextButton: '.swiper-button-next',
 	prevButton: '.swiper-button-prev',
+})
+
+const myProducts = new Swiper('#product-container', {
+	noSwiping: true,
+	slidesPerView: 'auto',
+
+	onClick: function(swiper) {
+		console.log(swiper);
+	},
+
+	// 如果需要前进后退按钮
+	nextButton: '.swiper-button-product-next',
+	prevButton: '.swiper-button-product-prev',
 })
 
 $("#js-get-data").click(function() {

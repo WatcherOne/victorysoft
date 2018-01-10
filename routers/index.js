@@ -9,11 +9,12 @@ const router = express.Router();
 const request = require('request');
 
 router.get('/', function(req, res) {
-  request('http://localhost:8080/api/user', function(error, response, body) {
-    if(!error && response.statusCode == 200) {
-      res.render('home', { title: '北京威胜通达', data: body });
-    }
-  })
+  // request('http://localhost:8080/api/user', function(error, response, body) {
+  //   if(!error && response.statusCode == 200) {
+  //     res.render('home', { title: '北京威胜通达', data: body });
+  //   }
+  // })
+  res.render('home', { title: '北京威胜通达' });
 })
 
 router.get('/input', function(req, res) {

@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #F1FBFB;
 }
 
 ul {
@@ -11,6 +12,7 @@ ul {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 .inline {
@@ -19,6 +21,14 @@ a {
 
 .hide {
 	display: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
 }
 
 .header {
@@ -93,13 +103,119 @@ a {
 	color: #fff;
 }
 
-.slide {
-	height: 800px;
+.banner {
 	width: 1200px;
 	margin: 0 auto;
 }
 
-.slide .slide-top {
-	height: 18px;
+.banner .banner-top {
+	height: 4px;
 	width: 1200px;
+}
+
+.intro {
+	width: 1180px;
+	margin: 0 auto;
+	background-color: #1EA0BE;
+	border: 1px solid #dfdfdf;
+	border-radius: 5px;
+	padding: 0 10px 10px 10px;
+}
+
+.intro .title {
+	height: 40px;
+	line-height: 40px;
+	padding-left: 5px;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.intro .content {
+	height: 150px;
+	padding: 10px;
+	background-color: #f8f8f8;
+	border-radius: 5px;
+}
+
+.intro .content .text {
+	height: 150px;
+	overflow: hidden;
+	margin-left: 310px;
+	white-space: pre-wrap;
+	text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+}
+
+.product {
+	margin-top: 10px;
+	padding-bottom: 0px;
+}
+
+.products {
+	width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 10px;
+}
+
+.products .swiper-button-product-prev {
+	left: -45px;
+}
+
+.products .swiper-button-product-next {
+	right: -45px;
+}
+
+.news {
+	margin-top: 10px;
+}
+
+.news .content .message {
+	color: #444;
+	margin-bottom: 4px;
+}
+
+.icon-tubiao_Axinwengonggao {
+	margin-right: 5px;
+	color: rgb(248, 94, 94);
+}
+
+.footer {
+	width: 100%;
+	background-color: rgba(129,129,129, 0.6);
+}
+
+.footer .f_bg {
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-top: 5px;
+}
+
+.footer .f_bg .contact {
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	color: white;
+	font-size: 14px;
+}
+
+.footer .f_bg .contact.bold {
+	font-weight: bold;
+	border-bottom: 1px dotted #dfdfdf;
+}
+
+.footer .bq_bg {
+	width: 100%;
+	min-width: 1200px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 12px;
+	color: #dfdfdf;
+	background-color: #777777;
 }
