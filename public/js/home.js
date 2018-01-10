@@ -1,6 +1,5 @@
 var mySwiper = new Swiper('.swiper-container', {
-	autoplay: 5000,
-	effect: 'coverflow',
+	autoplay: 4000,
 	speed: 500,
 	loop: true,
 	
@@ -15,4 +14,14 @@ var mySwiper = new Swiper('.swiper-container', {
 	// 如果需要前进后退按钮
 	nextButton: '.swiper-button-next',
 	prevButton: '.swiper-button-prev',
+})
+
+$("#js-get-data").click(function() {
+	$.ajax({
+		url: "/api/boys",
+		method: 'GET',
+		success: (data) => {
+			console.log(data);
+		}
+	})
 })

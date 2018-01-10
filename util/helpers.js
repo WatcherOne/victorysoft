@@ -5,7 +5,7 @@
 // Create Time: 2018-01-05
 //==============================================================================
 const helpers = {
-  dataJson: function(val, options) {
+  json: function(val, options) {
 		return JSON.stringify(val);
   },
 

@@ -17,6 +17,10 @@ a {
 	display: inline-block;
 }
 
+.hide {
+	display: none;
+}
+
 .header {
 	width: 1200px;
 	height: 80px;
@@ -93,4 +97,9 @@ a {
 	height: 800px;
 	width: 1200px;
 	margin: 0 auto;
+}
+
+.slide .slide-top {
+	height: 18px;
+	width: 1200px;
 }

@@ -6,10 +6,13 @@
 //==============================================================================
 
 const express = require('express');
+const proxy = require('http-proxy-middleware');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');
+
 const helpers = require('./util/helpers');
-const routers = require('./routers/index');
+const index = require('./routers/index');
 const products = require('./routers/products');
 const app = new express();
 
@@ -27,11 +30,20 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'views'));
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// 以api开头的请求代理到后端
+const apiProxy = proxy('/api', { target: 'http://localhost:8080', changeOrigin: true });
+app.use('/api/*', apiProxy);
 // 路由
-app.use('/', routers);
+app.use('/', index);
 app.use('/products', products);
 
-app.listen("3000");
-console.log('Listening on port 3000');
-console.log('当前文件路径'+ __dirname);
-// __dirname是node.js中的全局变量，表示当前文件的路径,本地为 C:\Users\wstd\Desktop\company
+const server = app.listen("3000", function() {
+  const host = server.address().address;
+  const port = server.address().port;
+  console.log(`Listening on ${host}:${port}`);
+  console.log('当前文件路径'+ __dirname);
+  // __dirname是node.js中的全局变量，表示当前文件的路径,本地为 C:\Users\wstd\Desktop\company  
+});
