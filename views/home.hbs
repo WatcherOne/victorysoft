@@ -57,31 +57,16 @@
 	<div class="title">最新动态<a href="javascript:;"><span class="right">More ></span></a></div>
 	<div class="content">
 		<ul>
-			<li>
-				<div class="message"><i class="iconfont icon-tubiao_Axinwengonggao"></i>这是第一则新闻
-					<span class="right">2017-09-10</span>
-				</div>
-			</li>
-			<li>
-				<div class="message"><i class="iconfont icon-tubiao_Axinwengonggao"></i>这是第二则新闻
-					<span class="right">2017-10-10</span>
-				</div>
-			</li>
-			<li>
-				<div class="message"><i class="iconfont icon-tubiao_Axinwengonggao"></i>这是第三则新闻
-					<span class="right">2017-11-10</span>
-				</div>
-			</li>
-			<li>
-				<div class="message"><i class="iconfont icon-tubiao_Axinwengonggao"></i>这是第四则新闻
-					<span class="right">2017-12-10</span>
-				</div>
-			</li>
-			<li>
-				<div class="message"><i class="iconfont icon-tubiao_Axinwengonggao"></i>这是第五则新闻
-					<span class="right">2018-01-10</span>
-				</div>
-			</li>
+			{{#each (parse data)}}
+				<li>
+					<div class="message">
+						<a href="javascript:;">
+							<i class="iconfont icon-tubiao_Axinwengonggao"></i>{{title}}
+							<span class="right">{{formatDate createdAt 'day'}}</span>
+						</a>
+					</div>
+				</li>
+			{{/each}}
 		</ul>
 	</div>
 </div>

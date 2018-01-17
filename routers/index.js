@@ -14,11 +14,19 @@ router.get('/', function(req, res) {
   //     res.render('home', { title: '北京威胜通达', data: body });
   //   }
   // })
-  res.render('home', { title: '北京威胜通达' });
+  request('http://localhost:8080/api/new', function(error, response, body) {
+    if(!error && response.statusCode == 200) {
+      res.render('home', { title: '北京威胜通达', nav: '1', data: body });
+    }
+  });
 })
 
 router.get('/input', function(req, res) {
-  res.render('input', { title: '加入数据库数据', layout: 'second_layout' })
+  res.render('input', { title: '后台系统', layout: 'second_layout' })
+})
+
+router.get('/products/:id', function(req, res){
+  res.render('products', { title: "产品", nav: '3', id: req.params.id });
 })
 
 module.exports = router;

@@ -1,12 +1,41 @@
-<div>新增什么</div>
-<form class="js-put-form">
-	<label for="userName">用户名称</label>
-	<input id="userName" type="text" name="userName"/>
-	<label for="realName">真实姓名</label>
-	<input id="realName" type="text" name="realName"/>
-	<label for="password">密码</label>
-	<input id="password" type="number" name="password"/>
-	<label for="userType">用户类型</label>
-	<input id="userType" type="number" name="userType"/>
-	<button type="submit">提交</button>
-</form>
+<header>
+	<div class="header">后台编辑信息平台</div>
+</header>
+<section class="section">
+	<div class="sec-content">
+		<div class="title inline">增加新闻</div>
+		<div class="right">
+			<i class="iconfont icon-jiahao2 js-show-tag"></i>
+			<i class="iconfont icon-jianhao js-hide-tag hide"></i>
+		</div>
+	</div>
+	<form class="hide js-put-news input-content">
+		<label for="title">新闻标题</label>
+		<input id="title" type="text" name="title"/>
+		<label for="time">时间</label>
+		<input id="time" type="date" name="createdAt"/>
+		<label for="content">内容</label>
+		<input id="content" type="text" name="content"/>
+		<button type="submit">提交</button>
+	</form>
+</section>
+<section class="section">
+	<div class="sec-content">
+		<div class="title inline">其他信息</div>
+		<div class="right">
+			<i class="iconfont icon-jiahao2 js-show-tag"></i>
+			<i class="iconfont icon-jianhao js-hide-tag hide"></i>
+		</div>
+	</div>
+	<form class="hide js-put-form input-content">
+		<label for="userName">用户名称</label>
+		<input id="userName" type="text" name="userName"/>
+		<label for="realName">真实姓名</label>
+		<input id="realName" type="text" name="realName"/>
+		<label for="password">密码</label>
+		<input id="password" type="number" name="password"/>
+		<label for="userType">用户类型</label>
+		<input id="userType" type="number" name="userType"/>
+		<button type="submit">提交</button>
+	</form>
+</section>

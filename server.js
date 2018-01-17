@@ -13,7 +13,6 @@ const bodyParser = require('body-parser');
 
 const helpers = require('./util/helpers');
 const index = require('./routers/index');
-const products = require('./routers/products');
 const app = new express();
 
 // 处理静态请求
@@ -38,7 +37,6 @@ const apiProxy = proxy('/api', { target: 'http://localhost:8080', changeOrigin: 
 app.use('/api/*', apiProxy);
 // 路由
 app.use('/', index);
-app.use('/products', products);
 
 const server = app.listen("3000", function() {
   const host = server.address().address;

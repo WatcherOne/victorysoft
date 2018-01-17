@@ -28,13 +28,3 @@ const myProducts = new Swiper('#product-container', {
 	nextButton: '.swiper-button-product-next',
 	prevButton: '.swiper-button-product-prev',
 })
-
-$("#js-get-data").click(function() {
-	$.ajax({
-		url: "/api/boys",
-		method: 'GET',
-		success: (data) => {
-			console.log(data);
-		}
-	})
-})

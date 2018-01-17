@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #F1FBFB;
 }
 
 ul {
@@ -11,8 +12,50 @@ ul {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 .inline {
 	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.header {
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #18A08B;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.section {
+	width: 800px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 5px 10px;
+	border: 1px solid #0C96B3;
+	border-radius: 5px;
+}
+
+.section .sec-content {
+	line-height: 30px;
+	color: #18A08B;
+}
+
+.section .sec-content .right {
+	cursor: pointer;
 }

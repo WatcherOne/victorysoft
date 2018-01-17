@@ -185,27 +185,92 @@ a {
 
 .footer {
 	width: 100%;
-	background-color: rgba(129,129,129, 0.6);
+	background-color: rgba(129,129,129, 1.5);
 }
 
 .footer .f_bg {
 	width: 1200px;
+	height: 250px;
 	margin: 0 auto;
 	margin-top: 20px;
-	padding-top: 5px;
 }
 
-.footer .f_bg .contact {
-	height: 22px;
-	line-height: 22px;
-	text-align: center;
+.footer .f_bg ul li {
+	float: left;
+	height: 250px;
 	color: white;
-	font-size: 14px;
+	border-right: 1px solid #9a9a9a;
 }
 
-.footer .f_bg .contact.bold {
+.footer .f_bg .f_a {
+	width: 300px;
+	padding-right: 30px;
+}
+
+.footer .f_bg .f_b, .footer .f_bg .f_c, .footer .f_bg .f_d, .footer .f_bg .f_e {
+	width: 120px;
+	padding: 0 50px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.footer .f_bg .f_d {
+	width: 90px;
+	padding: 0 65px;
+}
+
+.footer .f_bg .f_e {
+	width: 40px;
+	padding: 0 82px;
+}
+
+.footer .f_bg .f_b .top, .footer .f_bg .f_c .top, .footer .f_bg .f_d .top, .footer .f_bg .f_e .top {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 17px;
 	font-weight: bold;
-	border-bottom: 1px dotted #dfdfdf;
+	line-height: 30px;
+}
+
+.footer .f_bg .f_a .gap {
+	width: 3px;
+	height: 40px;
+	margin-top: 10px;
+	background-color: #F4F4F4;
+}
+
+.footer .f_bg .f_a .am {
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 10px;
+	vertical-align: top;
+}
+
+.footer .f_bg .f_a .content {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 23px;
+}
+
+.footer .f_bg .f_a .content .top {
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.footer .f_bg .f_a .top-content {
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.footer .f_bg .f_a .bottom-content {
+	padding-top: 5px;
+	border-top: 1px solid #9a9a9a;
+}
+
+.footer .f_bg .f_a .bottom-content .top {
+	font-size: 14px;
 }
 
 .footer .bq_bg {
@@ -218,4 +283,39 @@ a {
 	font-size: 12px;
 	color: #dfdfdf;
 	background-color: #777777;
+}
+
+/* 产品类样式 */
+.products-page {
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.products-page .slide {
+	width: 330px;
+}
+
+/* .products-page .slide .slide-content {
+	padding: 10px;
+	border: 1px solid #18A08B;
+	border-radius: 5px;
+} */
+
+.products-page .slide .slide-content li {
+	line-height: 35px;
+	padding-left: 20px;
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+
+.products-page .slide .slide-content li.active {
+	background-color: #1BA5A2;
+	color: white;
+	box-shadow: 0px 2px 2px 2px #666;
+}
+
+.products-page .content {
+	width: calc(100% - 400px);
+	vertical-align: top;
 }
