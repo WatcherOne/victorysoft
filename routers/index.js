@@ -16,7 +16,15 @@ router.get('/', function(req, res) {
   // })
   request('http://localhost:8080/api/new', function(error, response, body) {
     if(!error && response.statusCode == 200) {
-      res.render('home', { title: '北京威胜通达', nav: '1', data: body });
+      res.render('index', { title: '北京威胜通达', nav: '1', data: body });
+    }
+  });
+})
+
+router.get('/test', function(req, res) {
+  request('http://localhost:8080/api/new', function(error, response, body) {
+    if(!error && response.statusCode == 200) {
+      res.render('test', { title: '北京威胜通达', nav: '1', layout: 'test_layout', data: body });
     }
   });
 })

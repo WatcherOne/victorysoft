@@ -5,6 +5,7 @@ body {
 	font-size: 11px;
 	line-height: 18px;
 	background: #F0F0F0;
+	border: 20px solid #ffffff;
 }
 
 ul {
@@ -16,14 +17,6 @@ ul {
 a {
 	text-decoration: none;
 	color: inherit;
-}
-
-.inline {
-	display: inline-block;
-}
-
-.hide {
-	display: none;
 }
 
 .left {
@@ -38,88 +31,68 @@ a {
 	clear: both;
 }
 
-
-/* 首页头部样式 */
+/* 网站首页header */
 .site-header {
-	width: 1200px;
-	height: 80px;
-	margin: 0 auto;
-}
-
-.site-header .logo {
-	display: inline-block;
-	height: 60px;
-	padding: 10px 0;
-}
-
-.site-header .company-name {
-	display: inline-block;
-	height: 80px;
-	font-size: 24px;
-	color: #18A08B;
-	vertical-align: middle;
-}
-
-.site-header-contact {
-	float: right;
-	height: 50px;
-	padding: 17px 0 13px 0;
-}
-
-.site-header-contact .icon-lianxidianhua {
-	font-size: 35px;
-	color: darkorchid;
-	margin-right: 10px;
-}
-
-.site-header-contact .phone-text {
-	color: #666;
-}
-
-.site-header-contact .phone {
-	font-size: 14px;
-	color: #18A08B;
-}
-
-/* 首页导航Nav */
-.site-nav {
-	width: 100%;
-	height: 45px;
-	background: #0C96B3;
-	box-shadow: 2px 2px 4px #666;
-}
-
-.site-nav-content {
-	width: 1200px;
-	height: 100%;
-	margin: 0 auto;
 	position: relative;
+	z-index: 100;
+	margin-top: -44px;
+}
+
+.site-title {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+    margin-bottom: -40px;
+    padding: 15px;
+}
+
+.site-title a {
+	display: block;
+	width: 300px;
+	height: 208px;
+	background: url("/images/header-img.png") center top no-repeat;
+}
+
+.site-nav {
+	width: 950px;
+	position: relative;
+	top: -85px;
+	margin: auto;
+}
+
+.site-nav ul {
+	position: absolute;
+	top: 0;
 }
 
 .site-nav ul li {
-	float: left;
-	padding: 0 20px;
-	line-height: 45px;
+	display: inline;
 }
 
 .site-nav ul li a {
-	font-size: 18px;
-	color: #fff;
+	display: inline-block;
+	margin: 0 10px;
+	padding: 5px;
+	color: rgba(0, 0, 0, .5);
 }
 
-.site-nav ul li.active {
-	background-color: #037891;
+.site-nav ul li a:hover {
+	color: #333;
+}
+
+.site-nav ul.list-1 {
+	left: 0;
+}
+
+.site-nav ul.list-2 {
+	right: 0;
 }
 
 /* 首页轮播组件样式 */
 .site-banner {
 	width: 1200px;
-	margin: 0 auto;
-}
-
-.site-banner .banner-top {
-	height: 10px;
-	width: 1200px;
+	margin: auto;
 }
 
 .site-banner #banner-container .swiper-pagination-bullets {
@@ -157,57 +130,19 @@ a {
 	color: #966B3A;
 }
 
-/* 首页公司概述组件样式 */
-.site-intro {
-	width: 1180px;
-	margin: 0 auto;
-	background-color: #1EA0BE;
-	border: 1px solid #dfdfdf;
-	border-radius: 5px;
-	padding: 0 10px 10px 10px;
-}
-
-.site-intro .title {
-	height: 40px;
-	line-height: 40px;
-	padding-left: 5px;
-	color: white;
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.site-intro .content {
-	height: 150px;
-	padding: 10px;
-	background-color: #f8f8f8;
-	border-radius: 5px;
-}
-
-.site-intro .content .text {
-	height: 150px;
-	overflow: hidden;
-	margin-left: 310px;
-	line-height: 22px;
-	white-space: pre-wrap;
-	text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
-}
-
-/* 首页产品组件样式 */
+/* 首页公司产品组件样式 */
 .site-products {
 	width: 1200px;
 	margin: auto;
-	margin-top: 80px;
-	margin-bottom: 70px;
+	margin-top: 120px;
+	margin-bottom: 50px;
 	position: relative;
 }
 
 .site-products header h1 {
 	position: absolute;
     top: -75px;
-    left: -20px;
+    left: 0;
     z-index: 99;
 }
 
@@ -259,74 +194,75 @@ a {
 	right: -35px;
 }
 
-/* 首页动态消息组件样式 */
+/* 首页最新消息组件样式 */
 .site-news {
-	position: relative;
-	width: 1180px;
-	background-color: #1EA0BE;
-	border-radius: 5px;
-	margin: 0 auto;
-	padding: 10px;
+	width: 1200px;
+	height: 600px;
+	margin: auto;
+	background: url("/images/news-bg.jpg") center center no-repeat;
+	text-align: center;
 	margin-bottom: 50px;
 }
 
-.site-news .header {
-	position: absolute;
-    width: 100%;
-    top: -50px;
-    left: 0;
+.site-news header {
+	padding: 20px 0;
 }
 
-.site-news .header .title {
-	width: 188px;
-	font-family: cursive;
-	font-size: 24px;
-	font-weight: bold;
-	color: rgb(248, 94, 94);;
-	text-align: center;
-    vertical-align: bottom;
+.site-news header h1 {
+	display: inline-block;
+    border: 1px dotted #fff;
+	padding: 20px 30px;
+	color: white;
 }
 
-.site-news .header .title .more {
-	font-size: 18px;
+.site-news header h1 .more {
+	font-size: 12px;
 	margin-left: 10px;
-	color: #666;
+	border-bottom: 1px dotted #fff;
 }
 
-.site-news .header .title .more:hover {
+.site-news header h1 .more:hover {
 	color: #966B3A;
+	border-bottom-color: #966B3A;
 }
 
-.site-news .header .left-line {
-	width: 500px;
-	height: 5px;
-	background-color: #06A5A3;
+.site-news .new {
+	display: inline-block;
+	margin: 15px 10px;
+	text-align: left;
+	width: 255px;
+	background-color: #fff;
+	transition: transform .2s;
 }
 
-.site-news .header .right-line {
-	width: 500px;
-	height: 5px;
-	background-color: #06A5A3;
+.site-news .new:hover {
+	transform: translateY(-10px);
 }
 
-.site-news .content {
-	border-radius: 5px;
-	background-color: #f8f8f8;
-	padding: 10px;
-	line-height: 20px;
+.site-news .new header {
+	padding: 15px 20px;
 }
 
-.site-news .content ul li {
-	color: #444;
-	margin-bottom: 4px;
+.site-news .new header .time {
+	color: #966B3A;
+    margin-bottom: 5px;
 }
 
-.site-news .content ul li a {
-	display: block;
+.site-news .new header .title {
+	font-size: 15px;
+	font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.site-news .new .new-img {
+	position: relative;
+	width: 100%;
+	height: 255px;
 }
 
 .icon-tubiao_Axinwengonggao {
-	margin-right: 5px;
 	color: rgb(248, 94, 94);
 }
 
@@ -377,13 +313,9 @@ a {
 
 .site-footer .site-footer-content p {
 	line-height: 18px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
-}
-
-.site-footer .site-footer-content section div {
-	font-size: 13px;
 }
 
 .site-footer .site-footer-content section a:hover {
@@ -394,33 +326,4 @@ a {
 	text-align: center;
 	margin-top: 30px;
 	color: #D8D8D8;
-}
-
-/* 产品类样式 */
-.products-page {
-	width: 1200px;
-	margin: 0 auto;
-	margin-top: 10px;
-}
-
-.products-page .slide {
-	width: 330px;
-}
-
-.products-page .slide .slide-content li {
-	line-height: 35px;
-	padding-left: 20px;
-	margin-bottom: 15px;
-	font-size: 16px;
-}
-
-.products-page .slide .slide-content li.active {
-	background-color: #1BA5A2;
-	color: white;
-	box-shadow: 0px 2px 2px 2px #666;
-}
-
-.products-page .content {
-	width: calc(100% - 400px);
-	vertical-align: top;
 }
