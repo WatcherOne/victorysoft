@@ -28,35 +28,35 @@
 	<div class="swiper-container products-container" id="products-container">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide" style="width: 270px">
-				<a href="/input">
+				<a href="/products/1">
 					<img src="/images/product1.jpg" alt="" style="width: 100%; height: 280px" />
 					<div class="product-name">北斗应用</div>
 					<div class="product-created">2017-01-14</div>
 				</a>
 			</div>
 			<div class="swiper-slide" style="width: 270px">
-				<a href="javascript:;">
+				<a href="/products/2">
 					<img src="/images/product2.jpg" alt="" style="width: 100%; height: 280px" />
 					<div class="product-name">通航应用</div>
 					<div class="product-created">2017-01-14</div>
 				</a>
 			</div>
 			<div class="swiper-slide" style="width: 270px">
-				<a href="javascript:;">
+				<a href="/products/3">
 					<img src="/images/product3.jpg" alt="" style="width: 100%; height: 280px" />
 					<div class="product-name">人影对空射击</div>
 					<div class="product-created">2017-01-14</div>
 				</a>
 			</div>
 			<div class="swiper-slide" style="width: 270px">
-				<a href="javascript:;">
+				<a href="/products/4">
 					<img src="/images/product4.jpg" alt="" style="width: 100%; height: 280px" />
 					<div class="product-name">人影飞行</div>
 					<div class="product-created">2017-01-14</div>
 				</a>
 			</div>
 			<div class="swiper-slide" style="width: 270px">
-				<a href="javascript:;">
+				<a href="/products/5">
 					<img src="/images/product5.jpg" alt="" style="width: 100%; height: 280px" />
 					<div class="product-name">北斗应用</div>
 					<div class="product-created">2017-01-14</div>
@@ -71,14 +71,14 @@
 <div class="site-news">
 	<header class="header">
 		<div class="left-line inline"></div>
-		<div class="title inline">最新动态<a href="javascript:;" class="more">More</span></a></div>
+		<div class="title inline">最新动态<a href="/news" class="more">More</span></a></div>
 		<div class="right-line inline"></div>
 	</header>
 	<div class="content">
 		<ul>
 			{{#each (parse data)}}
 				<li>
-					<a href="javascript:;">
+					<a href="/news/{{id}}">
 						<i class="iconfont icon-tubiao_Axinwengonggao"></i>{{title}}
 						<span class="right">{{formatDate createdAt 'day'}}</span>
 					</a>

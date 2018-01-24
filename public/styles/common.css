@@ -7,6 +7,18 @@ body {
 	background: #F0F0F0;
 }
 
+/* @media screen and (max-width: 300px) {
+    body {
+        background-color:lightblue;
+    }
+} */
+
+/* 属性====> */
+/* @media device-width，device-height 屏幕高度(设备实际大小) */
+/* @media width,height 渲染窗口宽度 */
+/* @media orientation  设备方向  */
+/* @media resolution   设备分辨率 由GPA来决定的 */
+
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -396,31 +408,111 @@ a {
 	color: #D8D8D8;
 }
 
-/* 产品类样式 */
-.products-page {
+/* 公司详情页介绍 */
+.about {
 	width: 1200px;
-	margin: 0 auto;
+	margin: 10px auto;
+}
+
+.about .aside-left {
+	width: 200px;
+}
+
+.about .aside-right {
+	width: 952px;
+	vertical-align: top;
+    border: 1px solid #333;
+	padding: 20px;
+}
+
+.about .aside-left ul li {
+	padding: 5px 0 5px 15px;
+}
+
+.about .aside-left ul li a {
+	display: block;
+}
+
+.about .aside-left ul li:first-child {
+	cursor: pointer;
+	padding: 10px;
+	background-color: #1EA0BE;
+}
+
+.about .aside-right section header {
+	/* background-color: rgb(172, 220, 231); */
+	height: 30px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.about .aside-right section .article {
+	text-align: justify;
+    white-space: pre-wrap;
+}
+
+.about-table tr td:first-child {
+	background-color: #ccc;
+}
+
+/* 产品详情页样式 */
+.products {
+	width: 1200px;
+	margin: auto;
 	margin-top: 10px;
 }
 
-.products-page .slide {
-	width: 330px;
+.products .slide {
+	width: 200px;
 }
 
-.products-page .slide .slide-content li {
-	line-height: 35px;
-	padding-left: 20px;
-	margin-bottom: 15px;
-	font-size: 16px;
+.products .slide select {
+	width: 200px;
+    height: 25px;
 }
 
-.products-page .slide .slide-content li.active {
-	background-color: #1BA5A2;
-	color: white;
-	box-shadow: 0px 2px 2px 2px #666;
-}
-
-.products-page .content {
-	width: calc(100% - 400px);
+.products .content {
+	width: 992px;
 	vertical-align: top;
 }
+
+.products .content img {
+	display: block;
+	border: 1px solid #666;
+	margin-bottom: 5px;
+}
+
+/* 新闻中心页面样式 */
+.news {
+	width: 1200px;
+	margin: auto;
+	padding: 50px 0;
+}
+
+.news header {
+	font-size: 25px;
+    font-weight: bold;
+	line-height: 18px;
+	color: rgb(187, 40, 40);
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.news .content ul li {
+	line-height: 30px;
+}
+
+/* 新闻详情页面样式 */
+.news-detail header {
+	color: #966B3A;
+}
+
+.news-detail .line {
+	height: 16px;
+	border-bottom: 2px solid #bbb;
+	margin-bottom: 5px;
+}
+

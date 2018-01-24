@@ -34,7 +34,19 @@ router.get('/input', function(req, res) {
 })
 
 router.get('/products/:id', function(req, res){
-  res.render('products', { title: "产品", nav: '3', id: req.params.id });
+  res.render('products', { title: "产品中心", nav: '3', id: req.params.id });
+})
+
+router.get('/news', function(req, res){
+  res.render('news', { title: "新闻中心", nav: '4' });
+})
+
+router.get('/news/:id', function(req, res){
+  res.render('news_detail', { title: "新闻详情", nav: '4', id: req.params.id });
+})
+
+router.get('/about', function(req, res) {
+  res.render('about', { title: '公司简介', nav: '2' });
 })
 
 module.exports = router;
