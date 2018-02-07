@@ -1,13 +1,13 @@
-{{#with (parse data)}}
-    <div class="news news-detail">
-        <div class="container">
-            <a class="btn btn-primary" href="/news">返回</a>
+<div class="news news-detail">
+    <div class="container">
+        <a class="btn btn-primary" href="/news">返回</a>
+        {{#with data}}
             <header>{{title}}</header>
             <div class="line">
                 <div class="left">@{{creator}}</div>
                 <div class="right">{{formatDate createdAt "YYYY-MM-DD"}}</div>
             </div>
             <div class="content">{{{content}}}</div>
-        </div>
+        {{/with}}
     </div>
-{{/with}}
+</div>

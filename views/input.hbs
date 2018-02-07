@@ -17,65 +17,73 @@
                     <th width="30%" class="td-operate">操作</th>
                 </tr>
             </thead>
-            <tbody data-data="{{news}}">
-                {{#each (parse news)}}
+            <tbody>
+                {{#each news}}
                     <tr>
                         <td>{{add @index}}</td>
                         <td>{{title}}</td>
                         <td>{{formatDate createdAt "YYYY-MM-DD"}}</td>
                         <td class="td-operate">
-                            <a class="btn btn-default" href="/input/news?id={{id}}" role="button">编辑</a>
+                            <a class="btn btn-default" href="/admin/news?id={{id}}" role="button">编辑</a>
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" data-id="{{id}}" data-type="1">删除</button>                  
                         </td>
                     </tr>
                 {{/each}}
             </tbody>
         </table>
-        <a class="btn btn-primary" href="/input/news">新建公司动态</a>
+        <a class="btn btn-primary" href="/admin/news">新建公司动态</a>
     </div>
 </section>
 <section class="section">
 	<header class="sec-header">
 		<div class="title inline">产品信息</div>
 		<div class="right">
-			<i class="iconfont icon-jiahao2 js-show-tag"></i>
-			<i class="iconfont icon-jianhao js-hide-tag hide"></i>
+			<i class="iconfont icon-jiahao2 js-show-tag hide"></i>
+			<i class="iconfont icon-jianhao js-hide-tag"></i>
 		</div>
 	</header>
-    <div class="sec-content hide">
-        <table class="table table-bordered table-hover">
+    <div class="sec-content">
+        {{#each type}}
+            <a class="btn btn-medium btn-info" href="/admin/type?id={{id}}&typeName={{typeName}}" role="button">{{typeName}}</a>
+        {{/each}}
+        <a class="btn btn-primary right" href="/admin/type">新建产品分类</a>
+        <table class="table table-bordered table-hover products-table">
             <thead>
                 <tr>
                     <th width="20%">序号</th>
-                    <th width="30%">分类名字</th>
-                    <th width="30%" class="td-operate">操作</th>
+                    <th width="20%">产品名称</th>
+                    <th width="20%">产品类别</th>
+                    <th width="20%">创建时间</th>
+                    <th width="20%" class="td-operate">操作</th>
                 </tr>
             </thead>
-            <tbody data-data="{{type}}">
-                {{#each (parse type)}}
+            <tbody>
+                {{#each products}}
                     <tr>
                         <td>{{add @index}}</td>
+                        <td>{{name}}</td>
                         <td>{{typeName}}</td>
+                        <td>{{formatDate createdAt "YYYY-MM-DD"}}</td>
                         <td class="td-operate">
-                            <a class="btn btn-default" href="/input/type?id={{id}}&typeName={{typeName}}" role="button">编辑分类</a>
-                            <a class="btn btn-default" href="/input/type-products?typeId={{id}}" role="button">分类产品详情</a>
+                            <a class="btn btn-default" href="/admin/products?id={{id}}" role="button">编辑</a>
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" data-id="{{id}}" data-type="4">删除</button>                  
                         </td>
                     </tr>
                 {{/each}}
             </tbody>
         </table>
-        <a class="btn btn-primary" href="/input/type">新建产品分类</a>
+        <a class="btn btn-primary" href="/admin/products">新建产品</a>
     </div>
 </section>
 <section class="section">
 	<header class="sec-header">
 		<div class="title inline">招聘信息</div>
 		<div class="right">
-			<i class="iconfont icon-jiahao2 js-show-tag"></i>
-			<i class="iconfont icon-jianhao js-hide-tag hide"></i>
+			<i class="iconfont icon-jiahao2 js-show-tag hide"></i>
+			<i class="iconfont icon-jianhao js-hide-tag"></i>
 		</div>
 	</header>
-    <div class="sec-content hide">
+    <div class="sec-content">
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -85,21 +93,21 @@
                     <th width="30%" class="td-operate">操作</th>
                 </tr>
             </thead>
-            <tbody data-data="{{offers}}">
-                {{#each (parse offers)}}
+            <tbody>
+                {{#each offers}}
                     <tr>
                         <td>{{add @index}}</td>
                         <td>{{position}}</td>
                         <td>{{local}}</td>
                         <td class="td-operate">
-                            <a class="btn btn-default" href="/input/join?id={{id}}" role="button">编辑</a>
+                            <a class="btn btn-default" href="/admin/join?id={{id}}" role="button">编辑</a>
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" data-id="{{id}}" data-type="2">删除</button>                  
                         </td>
                     </tr>
                 {{/each}}
             </tbody>
         </table>
-        <a class="btn btn-primary" href="/input/join">新建公司招聘</a>
+        <a class="btn btn-primary" href="/admin/join">新建公司招聘</a>
     </div>
 </section>
 <!-- Modal -->

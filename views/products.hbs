@@ -3,7 +3,7 @@
     <div class="col-md-3">
       <!-- Nav tabs -->
       <ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
-        {{#each (parse type)}}
+        {{#each type}}
           <li role="presentation" {{#equals @index 0}}class="active"{{/equals}}><a href="#{{id}}" aria-controls="{{id}}" role="tab" data-toggle="tab">{{typeName}}</a></li>
         {{/each}}
       </ul>
@@ -12,9 +12,9 @@
     <div class="col-md-9">
       <!-- Tab panes -->
       <div class="tab-content">
-        {{#each (parse type)}}
+        {{#each type}}
           <div role="tabpanel" class="tab-pane {{#equals @index 0}}active{{/equals}}" id="{{id}}">
-            {{#each (parse ../products)}}
+            {{#each ../products}}
               {{#equals type ../id}}
                 <a href="/products/{{id}}" class="product-detail">
                   <img src="{{themeImg}}" alt="产品主题图">

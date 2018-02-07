@@ -1,7 +1,7 @@
 //==============================================================================
-// File Name: hbs_helper
-// Author: zhubo
-// email: 286154864@qq.com
+// File Name:   hbs_helper
+// Author:      zhubo
+// email:       286154864@qq.com
 // Create Time: 2018-01-05
 //==============================================================================
 const moment = require('moment');

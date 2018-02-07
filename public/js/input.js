@@ -50,7 +50,7 @@ function putFormSubmit(evt, editor = '') {
 		url,
 		method,
 		success: () => {
-			window.location.href = JSON.parse(type) === 4 ? `/input/type-products?typeId=${data.type}` : "/input"
+			window.location.href = "/admin"
 		}
 	})
 }
@@ -72,7 +72,13 @@ function deleteData(evt) {
 	$('#myModal').modal('hide')
 	const id = $(".js-delete-id").val();
 	const type = $(".js-delete-type").val();
-	const url = type === '1' ? '/api/new' : '/api/offer';
+	let url = '';
+	switch(JSON.parse(type)) {
+		case 1: url = '/api/new'; break;
+		case 2: url = '/api/offer'; break;
+		case 4: url = '/api/product'; break;
+		default: url = '';
+	}
 	$.ajax({
 		url: `${url}/${id}`,
 		method: "DELETE",

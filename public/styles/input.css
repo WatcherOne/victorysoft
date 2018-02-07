@@ -59,6 +59,11 @@ a {
 	color: #18A08B;
 }
 
+.section .sec-header .title {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
 .section .sec-header .right {
 	cursor: pointer;
 }
@@ -70,6 +75,10 @@ a {
 .section .sec-content table {
 	background: white;
 	margin-bottom: 10px;
+}
+
+.section .sec-content .products-table {
+	margin-top: 20px;
 }
 
 .section .sec-content .table>tbody>tr>td {
@@ -103,4 +112,8 @@ a {
 	min-height: 500px;
 	background: white;
 	border: 1px solid #ccc;
+}
+
+.w-e-text {
+	min-height: 500px;
 }

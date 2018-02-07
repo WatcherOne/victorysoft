@@ -3,29 +3,10 @@
         <header>全部动态</header>
         <div class="content">
             <ul>
-                {{#each (parse data)}}
+                {{#each data}}
                     <li>·&nbsp;<a href="/news/{{id}}">{{title}}</a><span class="right">{{formatDate createdAt "YYYY-MM-DD"}}</span></li>
                 {{/each}}
             </ul>
-            {{!-- <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li class="disabled">
-                        <span>
-                            <span aria-hidden="true">&laquo;</span>
-                        </span>
-                    </li>
-                    <li {{#unless pageNo}}class="active"{{else}}{{#equals pageNo 1}}class="active"{{/equals}}{{/unless}}><a href="/news?pageNo=1">1</a></li>
-                    <li {{#equals pageNo '2'}}class="active"{{/equals}}><a href="/news?pageNo=2">2</a></li>
-                    <li {{#equals pageNo '3'}}class="active"{{/equals}}><a href="/news?pageNo=3">3</a></li>
-                    <li {{#equals pageNo '4'}}class="active"{{/equals}}><a href="/news?pageNo=4">4</a></li>
-                    <li {{#equals pageNo '5'}}class="active"{{/equals}}><a href="/news?pageNo=5">5</a></li>
-                    <li class="disabled">
-                        <span>
-                            <span aria-hidden="true">&raquo;</span>
-                        </span>
-                    </li>
-                </ul>
-            </nav> --}}
         </div>
     </div>
 </div>

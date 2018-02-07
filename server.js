@@ -1,7 +1,7 @@
 //==============================================================================
-// File Name: node_server
-// Author: zhubo
-// email: 286154864@qq.com
+// File Name:   node_server
+// Author:      zhubo
+// email:       286154864@qq.com
 // Create Time: 2018-01-05
 //==============================================================================
 
@@ -14,6 +14,7 @@ const cookieParser = require('cookie-parser');
 
 const helpers = require('./util/helpers');
 const index = require('./routers/index');
+const admin = require('./routers/admin');
 const app = new express();
 
 // 处理静态请求
@@ -39,11 +40,12 @@ const apiProxy = proxy('/api', { target: 'http://localhost:8080', changeOrigin: 
 app.use('/api/*', apiProxy);
 // 路由
 app.use('/', index);
+app.use('/admin', admin);
 
 const server = app.listen("3000", function() {
   const host = server.address().address;
   const port = server.address().port;
   console.log(`Listening on ${host}:${port}`);
   console.log('当前文件路径'+ __dirname);
-  // __dirname是node.js中的全局变量，表示当前文件的路径,本地为 C:\Users\wstd\Desktop\company  
+  // __dirname是node.js中的全局变量，表示当前文件的路径
 });

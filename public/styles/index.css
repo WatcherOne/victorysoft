@@ -628,7 +628,7 @@ i.icon-tubiao_Axinwengonggao {
 
 /* 单个产品详情页面 */
 .products-detail {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 20px;
     min-height: 500px;
 }
@@ -641,6 +641,8 @@ i.icon-tubiao_Axinwengonggao {
 
 .products-detail .time {
     color: #666;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 5px;
     text-align: center;
 }
 

@@ -16,6 +16,7 @@
     "http-proxy-middleware": "^0.17.4",
     "moment": "^2.20.1",
     "path": "^0.12.7",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
   }
 }

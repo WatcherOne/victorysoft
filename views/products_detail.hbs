@@ -1,6 +1,7 @@
 <div class="products-detail">
     <div class="container">
-        {{#with (parse data)}}
+        <a class="btn btn-primary" href="/products">返回</a>
+        {{#with data}}
             <header>{{name}}</header>
             <div class="time">{{formatDate createdAt "YYYY-MM-DD"}}</div>
             <div class="detail-extra">
