@@ -1,21 +1,33 @@
 <div class="products">
-  {{> slide}}
-	<div class="content inline">
-    <section class="one" id="one">
-      <img src="" alt="北斗应用" style="width: 990px; height: 900px" />
-      <img src="" alt="北斗应用" style="width: 990px; height: 900px" />
-    </section>
-    <section class="two" id="two">
-      <img src="" alt="通航应用" style="width: 990px; height: 900px" />
-      <img src="" alt="通航应用" style="width: 990px; height: 900px" />
-    </section>
-    <section class="third" id="third">
-      <img src="" alt="人影对空射击" style="width: 990px; height: 900px" />
-      <img src="" alt="人影对空射击" style="width: 990px; height: 900px" />
-    </section>
-    <section class="four" id="four">
-      <img src="" alt="人影飞行" style="width: 990px; height: 900px" />
-      <img src="" alt="人影飞行" style="width: 990px; height: 900px" />
-    </section>
+  <div class="container" id="myTabs" role="navigation">
+    <div class="col-md-3">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
+        {{#each (parse type)}}
+          <li role="presentation" {{#equals @index 0}}class="active"{{/equals}}><a href="#{{id}}" aria-controls="{{id}}" role="tab" data-toggle="tab">{{typeName}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-md-9">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        {{#each (parse type)}}
+          <div role="tabpanel" class="tab-pane {{#equals @index 0}}active{{/equals}}" id="{{id}}">
+            {{#each (parse ../products)}}
+              {{#equals type ../id}}
+                <a href="/products/{{id}}" class="product-detail">
+                  <img src="{{themeImg}}" alt="产品主题图">
+                  <div class="product-content">
+                    <div class="product-desc">{{function}}</div>
+                    <div class="product-time">{{formatDate createdAt "YYYY-MM-DD"}}</div>
+                  </div>
+                </a>
+              {{/equals}}
+            {{/each}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
   </div>
 </div>

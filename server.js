@@ -10,6 +10,7 @@ const proxy = require('http-proxy-middleware');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 const helpers = require('./util/helpers');
 const index = require('./routers/index');
@@ -29,8 +30,9 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 // 以api开头的请求代理到后端
 const apiProxy = proxy('/api', { target: 'http://localhost:8080', changeOrigin: true });

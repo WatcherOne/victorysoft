@@ -1,10 +1,24 @@
 <div class="join">
-    <div class="aside-left inline">
-        <ul>
-            <li>招聘岗位</li>
-            <li>QT/C++软件开发工程师</li>
-            <li>Android开发工程师</li>
-        </ul>
+    <div class="container">
+        <div class="col-md-4">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
+                <li>招聘岗位</li>
+                {{#each (parse data)}}
+                    <li role="presentation" {{#equals @index 0}}class="active"{{/equals}}><a href="#{{id}}" aria-controls="{{id}}" role="tab" data-toggle="tab">{{position}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                {{#each (parse data)}}
+                    <div role="tabpanel" class="tab-pane {{#equals @index 0}}active{{/equals}}" id="{{id}}">
+                        <header>{{position}}({{local}})</header>
+                        {{{content}}}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
     </div>
-    <div class="aside-right inline"></div>
 </div>

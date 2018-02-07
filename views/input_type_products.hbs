@@ -1,0 +1,41 @@
+<header class="header">公司分类产品信息编辑平台</header>
+<section class="section">
+	<header class="sec-header">
+		<div class="title inline">产品列表</div>
+		<div class="right">
+			<i class="iconfont icon-jiahao2 js-show-tag hide"></i>
+			<i class="iconfont icon-jianhao js-hide-tag"></i>
+		</div>
+	</header>
+    <div class="sec-content">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th width="20%">序号</th>
+                    <th width="20%">产品名称</th>
+                    <th width="20%">产品类别</th>
+                    <th width="20%">创建时间</th>
+                    <th width="20%" class="td-operate">操作</th>
+                </tr>
+            </thead>
+            <tbody data-data="{{data}}">
+                {{#each (parse data)}}
+                    {{#equals type (parse ../typeId)}}
+                        <tr>
+                            <td>{{add @index}}</td>
+                            <td>{{name}}</td>
+                            <td>{{typeName}}</td>
+                            <td>{{formatDate createdAt "YYYY-MM-DD"}}</td>
+                            <td class="td-operate">
+                                <a class="btn btn-default" href="/input/products?id={{id}}" role="button">编辑</a>
+                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" data-id="{{id}}" data-type="3">删除</button>                  
+                            </td>
+                        </tr>
+                    {{/equals}}
+                {{/each}}
+            </tbody>
+        </table>
+        <a class="btn btn-primary" href="/input/products">新建公司产品</a>
+        <a class="btn btn-default" href="/input">返回</a>
+    </div>
+</section>

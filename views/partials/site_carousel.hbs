@@ -1,0 +1,16 @@
+<div class="swiper-container products-container" id="products-container">
+    <div class="swiper-wrapper">
+        {{#each (parse products)}}
+            <div class="swiper-slide">
+                <a href="/products/{{id}}">
+                    <img src="{{themeImg}}" alt="" style="width: 100%; height: 300px" />
+                    <div class="product-name">{{name}}</div>
+                    <div class="product-created">{{formatDate createdAt "YYYY-MM-DD"}}</div>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+</div>
+<!-- 如果需要导航按钮 -->
+<div class="swiper-button-prev swiper-button-product-prev swiper-button-black"></div>
+<div class="swiper-button-next swiper-button-product-next swiper-button-black"></div>

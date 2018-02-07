@@ -1,8 +1,13 @@
-<div class="news news-detail">
-    <header>新闻标题{{id}}</header>
-    <div class="line">
-        <div class="left">@wstd-xxx</div>
-        <div class="right">2018-01-20</div>
+{{#with (parse data)}}
+    <div class="news news-detail">
+        <div class="container">
+            <a class="btn btn-primary" href="/news">返回</a>
+            <header>{{title}}</header>
+            <div class="line">
+                <div class="left">@{{creator}}</div>
+                <div class="right">{{formatDate createdAt "YYYY-MM-DD"}}</div>
+            </div>
+            <div class="content">{{{content}}}</div>
+        </div>
     </div>
-    <div class="content">这是ID为{{id}}的内容</div>
-</div>
+{{/with}}

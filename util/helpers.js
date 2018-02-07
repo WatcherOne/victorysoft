@@ -49,14 +49,6 @@ const helpers = {
 
 	add: function(val, options){
 		return val + 1;
-	},
-	
-	judgeEven: function(val, options) {
-		if((value % 2) == 0) {
-			return options.fn(this);
-		} else {
-			return options.inverse(this);
-		}
 	}
 }
 

@@ -1,89 +1,52 @@
 <div class="site-banner">
-	<div class="banner-top"></div>
-	<div class="swiper-container" id="banner-container">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide swiper-no-swiping"><img src="images/banner1.jpg" alt="" style="width: 1200px; height: 650px" /></div>
-			<div class="swiper-slide swiper-no-swiping"><img src="images/banner2.jpg" alt="" style="width: 1200px; height: 650px" /></div>
-			<div class="swiper-slide swiper-no-swiping"><img src="images/banner3.jpg" alt="" style="width: 1200px; height: 650px" /></div>
-			<div class="swiper-slide swiper-no-swiping"><img src="images/banner4.jpg" alt="" style="width: 1200px; height: 650px" /></div>
-		</div>
-		<div class="swiper-pagination"></div>
-	</div>
-</div>
-<div class="site-intro">
-	<div class="title">公司概况</div>
-	<div class="content">
-		<img class="left" src="images/company_intro.jpg" alt="" style="width: 300px; height: 150px">
-		<div class="text">    公司管理层成员很多来自军队空管、气象领域，保持着长期在军队工作中形成的敬业精神和雷厉风行的工作作风，努力带领公司向“威武胜利之师”的发展目标进发。
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<img src="images/banner1.jpg" alt="" />
+			</div>
+			<div class="col-md-4">
+			 	<div class="content">
+					<div class="title">公司概况</div>
+					<div class="text">    公司管理层成员很多来自军队空管、气象领域，保持着长期在军队工作中形成的敬业精神和雷厉风行的工作作风，努力带领公司向“威武胜利之师”的发展目标进发。
     公司作为一行业高科技企业，特别是以软件集成技术为主题的高新企业，将以发展创新为先异，努力成为一个“学习型组织”，一家“发展型企业”。
     公司过去、现在和将来均持续为员工提供不断学习和发展的平台，使员工持续实现能力提高和自我完善，以使公司不断增进在空管、气象自动化技术领域的人才集聚和技术积累。
-    本公司主要产品为空管行业产品、气象行业产品以及通用型物联网系统产品。就物联网产品而言，我们具备气象人影物联网产品的5项专利证书，以及在华北地区的应用示范作用，具备技术、应用上先发优势，因此在行业应用方面具备市场竞争优势地位，在向其他行业推广应用方面也能够具备一定的市场竞争能力。</div>
+    本公司主要产品为空管行业产品、气象行业产品以及通用型物联网系统产品。就物联网产品而言，我们具备气象人影物联网产品的5项专利证书，和在华北地区应用示范作用，具备技术、应用上先发优势，因此在向其他行业推广应用方面也能够具备一定的市场竞争能力。</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <div class="site-products">
-	<header>
-		<h1><img src="/images/company-product-icon.png" alt="公司产品ICON" style="width: 170px; height: 136px" /></h1>
-		<h2><span>SHOW TIME</span></h2>
-	</header>
-	<div class="swiper-container products-container" id="products-container">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide" style="width: 270px">
-				<a href="/products/1">
-					<img src="/images/product1.jpg" alt="" style="width: 100%; height: 280px" />
-					<div class="product-name">北斗应用</div>
-					<div class="product-created">2017-01-14</div>
-				</a>
-			</div>
-			<div class="swiper-slide" style="width: 270px">
-				<a href="/products/2">
-					<img src="/images/product2.jpg" alt="" style="width: 100%; height: 280px" />
-					<div class="product-name">通航应用</div>
-					<div class="product-created">2017-01-14</div>
-				</a>
-			</div>
-			<div class="swiper-slide" style="width: 270px">
-				<a href="/products/3">
-					<img src="/images/product3.jpg" alt="" style="width: 100%; height: 280px" />
-					<div class="product-name">人影对空射击</div>
-					<div class="product-created">2017-01-14</div>
-				</a>
-			</div>
-			<div class="swiper-slide" style="width: 270px">
-				<a href="/products/4">
-					<img src="/images/product4.jpg" alt="" style="width: 100%; height: 280px" />
-					<div class="product-name">人影飞行</div>
-					<div class="product-created">2017-01-14</div>
-				</a>
-			</div>
-			<div class="swiper-slide" style="width: 270px">
-				<a href="/products/5">
-					<img src="/images/product5.jpg" alt="" style="width: 100%; height: 280px" />
-					<div class="product-name">北斗应用</div>
-					<div class="product-created">2017-01-14</div>
-				</a>
-			</div>
+	<div class="container">
+		<div class="col-md-12">
+			<header>
+				<h1><img src="/images/company-product-icon.png" alt="公司展示产品ICON" /></h1>
+				<h2><span>SHOW TIME</span></h2>
+			</header>
+		</div>
+		<div class="col-md-12">
+			{{> site_carousel}}
 		</div>
 	</div>
-	<!-- 如果需要导航按钮 -->
-	<div class="swiper-button-prev swiper-button-product-prev swiper-button-black"></div>
-	<div class="swiper-button-next swiper-button-product-next swiper-button-black"></div>
 </div>
 <div class="site-news">
-	<header class="header">
-		<div class="left-line inline"></div>
-		<div class="title inline">最新动态<a href="/news" class="more">More</span></a></div>
-		<div class="right-line inline"></div>
-	</header>
-	<div class="content">
-		<ul>
-			{{#each (parse data)}}
-				<li>
-					<a href="/news/{{id}}">
-						<i class="iconfont icon-tubiao_Axinwengonggao"></i>{{title}}
-						<span class="right">{{formatDate createdAt 'day'}}</span>
-					</a>
-				</li>
-			{{/each}}
-		</ul>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5"><div class="line inline"></div></div>
+			<div class="col-md-2"><div class="title inline">最新动态<a href="/news" class="more">More</span></a></div></div>
+			<div class="col-md-5"><div class="line inline"></div></div>
+		</div>
+		<div class="content">
+			<ul>
+				{{#each (parse news)}}
+					<li>
+						<a href="/news/{{id}}">
+							<i class="iconfont icon-tubiao_Axinwengonggao"></i>{{title}}
+							<span class="right">{{formatDate createdAt 'day'}}</span>
+						</a>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
 	</div>
 </div>

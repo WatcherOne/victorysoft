@@ -1,15 +1,31 @@
 <div class="news">
-    <header>所有新闻</header>
-    <div class="content">
-        <ul>
-            <li><a href="/news/1">第一条</a><span class="right">2018-01-20</span></li>
-            <li><a href="/news/2">第二条</a><span class="right">2018-01-20</span></li>
-            <li><a href="/news/3">第三条</a><span class="right">2018-01-20</span></li>
-            <li><a href="/news/4">第四条</a><span class="right">2018-01-20</span></li>
-            <li><a href="/news/5">第五条</a><span class="right">2018-01-20</span></li>
-            <li><a href="/news/6">第六条</a><span class="right">2018-01-20</span></li>
-            <li><a href="/news/7">第七条</a><span class="right">2018-01-20</span></li>
-            <li><a href="/news/8">第八条</a><span class="right">2018-01-20</span></li>
-        </ul>
+    <div class="container">
+        <header>全部动态</header>
+        <div class="content">
+            <ul>
+                {{#each (parse data)}}
+                    <li>·&nbsp;<a href="/news/{{id}}">{{title}}</a><span class="right">{{formatDate createdAt "YYYY-MM-DD"}}</span></li>
+                {{/each}}
+            </ul>
+            {{!-- <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="disabled">
+                        <span>
+                            <span aria-hidden="true">&laquo;</span>
+                        </span>
+                    </li>
+                    <li {{#unless pageNo}}class="active"{{else}}{{#equals pageNo 1}}class="active"{{/equals}}{{/unless}}><a href="/news?pageNo=1">1</a></li>
+                    <li {{#equals pageNo '2'}}class="active"{{/equals}}><a href="/news?pageNo=2">2</a></li>
+                    <li {{#equals pageNo '3'}}class="active"{{/equals}}><a href="/news?pageNo=3">3</a></li>
+                    <li {{#equals pageNo '4'}}class="active"{{/equals}}><a href="/news?pageNo=4">4</a></li>
+                    <li {{#equals pageNo '5'}}class="active"{{/equals}}><a href="/news?pageNo=5">5</a></li>
+                    <li class="disabled">
+                        <span>
+                            <span aria-hidden="true">&raquo;</span>
+                        </span>
+                    </li>
+                </ul>
+            </nav> --}}
+        </div>
     </div>
 </div>

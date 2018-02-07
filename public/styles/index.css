@@ -1,0 +1,649 @@
+body {
+    font-family: serif;
+    font-size: 1.5rem;
+    background: #F0F0F0;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.8rem;
+    }
+}
+
+a, a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.container {
+    padding: 0;
+}
+
+.container .row {
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .site-header .container {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+.col-md-12, .col-md-8, .col-md-7, .col-md-5, .col-md-4, .col-md-2, .col-xs-9, .col-xs-3 {
+    padding: 0;
+}
+
+/* icon样式 */
+i.icon-lianxidianhua {
+	font-size: 30px;
+	color: darkorchid;
+}
+
+i.icon-tubiao_Axinwengonggao {
+	margin-right: 5px;
+	color: rgb(248, 94, 94);
+}
+
+/* 首页顶部样式 */
+.site-header {
+    height: 80px;
+    padding: 10px 0;
+}
+
+.site-header .logo img {
+    width: 80px;
+    height: 60px;
+}
+
+.site-header .logo .company-name {
+    font-size: 2.3rem;
+    vertical-align: middle;
+    color: #18A08B;
+}
+
+@media (max-width: 992px) {
+    .site-header .logo img {
+        width: 70px;
+        height: 60px;
+    }
+    .site-header .logo .company-name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header .logo img {
+        width: 60px;
+        height: 50px;
+    }
+}
+
+.site-header .contact-way {
+    float: right;
+    padding-top: 7px;
+}
+
+.site-header .contact-way .contact-phone {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 2px;
+}
+
+.site-header .phone-text {
+    line-height: 12px;
+    color: #666;
+}
+
+.site-header .phone {
+	font-size: 1.4rem;
+	color: #18A08B;
+}
+
+/* 首页nav样式 */
+.site-nav {
+	width: 100%;
+	height: 45px;
+	background: #0C96B3;
+	box-shadow: 2px 2px 4px #666;
+}
+
+@media (max-width: 768px) {
+    .site-nav {
+        height: 31px;
+    }
+}
+
+.site-nav ul li {
+	float: left;
+	padding: 0 20px;
+	line-height: 45px;
+}
+
+.site-nav ul li a {
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+    .site-nav ul li {
+        padding: 0 10px;
+        line-height: 30px;
+    }
+    .site-nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+.site-nav ul li.active {
+	background-color: #037891;
+}
+
+/* 首页图片及概述 */
+.site-banner {
+    margin-top: 5px;
+}
+
+.site-banner img {
+    width: 100%;
+    height: 500px;
+}
+
+@media (max-width: 768px) {
+    .site-banner img {
+        height: 350px;
+    }
+}
+
+.site-banner .col-md-4 {
+    padding-left: 10px;
+}
+
+@media (max-width: 992px) {
+    .site-banner .col-md-4 {
+        padding-left: 0;
+    }
+}
+
+.site-banner .content {
+	background-color: #1EA0BE;
+	border: 1px solid #dfdfdf;
+	border-radius: 5px;
+    padding: 10px;
+}
+
+.site-banner .content .title {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.site-banner .content .text {
+    max-height: 454px;
+    min-height: 454px;
+	padding: 10px;
+	background-color: #f8f8f8;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: justify;
+}
+
+@media (max-width: 1200px) {
+    .site-banner .content .text {
+        overflow: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .site-banner .content .text {
+        min-height: initial;
+    } 
+}
+
+/* 首页产品展示 */
+.site-products {
+	margin-top: 70px;
+	margin-bottom: 30px;
+}
+
+.site-products .container {
+	position: relative;
+}
+
+.site-products header h1 {
+	position: absolute;
+    top: -75px;
+    left: -20px;
+    z-index: 99;
+}
+
+.site-products header h1 img {
+    width: 170px;
+    height: 136px;
+}
+
+@media (max-width: 768px) {
+    .site-products header h1 img {
+        width: 130px;
+        height: 100px;
+    }
+}
+
+.site-products header h2 {
+	margin-left: 148px;
+    border-bottom: 1px solid #DAD5D2;
+    text-align: right;
+	color: #666;
+	font-size: 1rem;
+    font-family: Geogrotesque-SemiBold,sans-serif;
+}
+
+@media (max-width: 768px) {
+    .site-products header h2 {
+        margin-left: 80px;
+    }
+}
+
+.site-products .swiper-slide {
+    width: 25%;
+    background: #fff;
+}
+
+@media (max-width: 992px) {
+    .site-products .swiper-slide {
+        width: 33.3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-products .swiper-slide {
+        width: 50%;
+    }
+}
+
+.site-products .swiper-slide a {
+	display: block;
+	padding: 6px;
+	-webkit-transition: background-color .15s,color .15s,border-color .15s,text-shadow .15s,opacity .15s;
+	transition: background-color .15s,color .15s,border-color .15s,text-shadow .15s,opacity .15s;
+}
+
+.site-products .swiper-slide a:hover {
+	background: url("/images/view-item.png") center center no-repeat;
+}
+
+.site-products .swiper-slide a:hover img {
+	opacity: 0.5;
+}
+
+.site-products .swiper-slide .product-name {
+	color: #000;
+    padding: 5px 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.site-products .swiper-slide .product-created {
+	color: #999;
+}
+
+.site-products .swiper-button-product-prev {
+	left: -35px;
+}
+
+.site-products .swiper-button-product-next {
+	right: -35px;
+}
+
+/* 首页公司动态信息 */
+.site-news {
+	margin-bottom: 50px;
+}
+
+.site-news .row {
+    margin-bottom: 10px;
+}
+
+.site-news .row .line {
+	width: 100%;
+	height: 5px;
+    background-color: #06A5A3;
+}
+
+.site-news .row .title {
+	width: 100%;
+	font-family: cursive;
+	font-size: 2.3rem;
+	font-weight: bold;
+	color: rgb(248, 94, 94);;
+	text-align: center;
+}
+
+.site-news .row .title .more {
+	font-size: 2rem;
+	margin-left: 10px;
+	color: #666;
+}
+
+@media (max-width: 992px) {
+    .site-news .row .title {
+        font-size: 2rem;
+    }
+
+    .site-news .row .title .more {
+        font-size: 1.5rem;
+    }
+}
+
+.site-news .row .title .more:hover {
+	color: #966B3A;
+}
+
+.site-news .content {
+    background-color: #1EA0BE;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.site-news .content ul {
+	border-radius: 5px;
+	background-color: #f8f8f8;
+	padding: 10px;
+	line-height: 20px;
+}
+
+.site-news .content ul li {
+	color: #444;
+	margin-bottom: 4px;
+}
+
+.site-news .content ul li a {
+	display: block;
+}
+
+/* 首页底部 */
+.site-footer {
+	background: #383733;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden;
+    line-height: 2.3;
+    font-size: 0.8rem;
+}
+
+.site-footer .go-to-top {
+    float: right;
+    font-size: 0.7rem;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.site-footer .go-to-top:hover {
+    color: #ccc;
+}
+
+.site-footer .row p {
+    line-height: 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.site-footer .row a:hover {
+	border-bottom: 1px solid #666;
+}
+
+.site-footer .site-extra {
+    text-align: center;
+	margin-top: 30px;
+	color: #D8D8D8;
+}
+
+/* 关于我们页面样式 */
+.about {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.about ul {
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+.about ul li {
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    background: url("/images/about-bg.jpg") center center no-repeat;
+}
+
+.about ul li:first-child {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.about ul li a {
+    display: block;
+    font-weight: bold;
+}
+
+.about ul li a:hover {
+    color: #18A08B;
+}
+
+.about section header {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: rgb(82, 170, 187);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.about section table {
+    width: 100%;
+}
+
+.about section table tr td {
+    padding: 5px;
+}
+
+.about .justify {
+    text-align: justify;
+}
+
+.about section .article {
+    white-space: pre-wrap;
+}
+
+.about-table tr td:first-child {
+	background-color: #d0cccc;
+}
+
+.about section .structure-img {
+    width: 70%;
+}
+
+/* 新闻中心页面样式 */
+.news {
+    padding: 40px 0;
+    min-height: 568px;
+}
+
+.news header {
+	font-size: 2.5rem;
+    font-weight: bold;
+	line-height: 18px;
+	color: rgb(187, 40, 40);
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted rgb(187, 40, 40);
+}
+
+.news .content ul li {
+	line-height: 30px;
+}
+
+/* 新闻详情页面样式 */
+.news-detail header {
+    color: #966B3A;
+    border-bottom-width: 0;
+    margin-bottom: 0;
+}
+
+.news-detail .line {
+	height: 20px;
+	border-bottom: 2px solid #bbb;
+	margin-bottom: 5px;
+}
+
+.news-detail .content {
+    margin-top: 10px;
+}
+
+/* 招聘中心样式 */
+.join {
+    padding: 20px 0;
+    min-height: 568px;
+}
+
+.join .nav-tabs {
+    border-bottom-width: 0;
+}
+
+.join .nav-tabs li:first-child {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-bottom: 1px dotted #dfdfdf;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.join .nav-stacked>li+li {
+    text-align: center;
+}
+
+.join .tab-content {
+    margin-left: 40px;
+    padding-top: 10px;
+}
+
+.join .tab-content header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.join .tab-content section {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.join .tab-content ul {
+    padding-left: 16px;
+    line-height: 24px;
+}
+
+.join .tab-content ul li {
+    list-style: disc;
+    font-size: 1.4rem;
+}
+
+/* 产品详情中心导航 */
+.products {
+    padding: 20px 0;
+    min-height: 500px;
+}
+
+.products .product-detail {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.products .product-detail:hover {
+    border-color: #06A5A3;
+}
+
+.products .product-detail img {
+    width: 200px;
+    height: 150px;
+}
+
+.products .product-detail .product-content {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.products .product-detail .product-desc {
+    margin-top: 10px;
+    max-height: 130px;
+    overflow: hidden;
+}
+
+.products .product-detail .product-time {
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+    color: #666;
+}
+
+/* 单个产品详情页面 */
+.products-detail {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    min-height: 500px;
+}
+
+.products-detail header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.products-detail .time {
+    color: #666;
+    text-align: center;
+}
+
+.products-detail .detail-extra {
+    padding: 20px;
+}
