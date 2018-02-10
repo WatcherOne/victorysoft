@@ -62,7 +62,13 @@
                     <tr>
                         <td>{{add @index}}</td>
                         <td>{{name}}</td>
-                        <td>{{typeName}}</td>
+                        <td>
+                            {{#each ../type}}
+                                {{#equals ../type id}}
+                                    {{typeName}}
+                                {{/equals}}
+                            {{/each}}
+                        </td>
                         <td>{{formatDate createdAt "YYYY-MM-DD"}}</td>
                         <td class="td-operate">
                             <a class="btn btn-default" href="/admin/products?id={{id}}" role="button">编辑</a>

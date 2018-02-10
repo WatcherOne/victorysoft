@@ -5,7 +5,7 @@
             <header>{{name}}</header>
             <div class="time">{{formatDate createdAt "YYYY-MM-DD"}}</div>
             <div class="detail-extra">
-                {{{content}}}
+                {{{decode content}}}
             </div>
         {{/with}}
     </div>

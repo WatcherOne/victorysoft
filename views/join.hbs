@@ -15,7 +15,7 @@
                 {{#each data}}
                     <div role="tabpanel" class="tab-pane {{#equals @index 0}}active{{/equals}}" id="{{id}}">
                         <header>{{position}}({{local}})</header>
-                        {{{content}}}
+                        {{{decode content}}}
                     </div>
                 {{/each}}
             </div>

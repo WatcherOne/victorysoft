@@ -7,7 +7,7 @@
                 <div class="left">@{{creator}}</div>
                 <div class="right">{{formatDate createdAt "YYYY-MM-DD"}}</div>
             </div>
-            <div class="content">{{{content}}}</div>
+            <div class="content">{{{decode content}}}</div>
         {{/with}}
     </div>
 </div>

@@ -47,8 +47,12 @@ const helpers = {
 		}
   	},
 
-	add: function(val, options){
+	add: function(val, options) {
 		return val + 1;
+	},
+
+	decode: function(val, options) {
+		return decodeURIComponent(val);
 	}
 }
 

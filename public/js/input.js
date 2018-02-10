@@ -1,9 +1,9 @@
 $(function () {
 	$('[data-toggle="popover"]').popover()
 })
-$(".js-show-tag").on("click", evt => this.showTag(evt))
-$(".js-hide-tag").on("click", evt => this.hideTag(evt))
-$(".js-delete-data").on("click", evt => this.deleteData(evt))
+$(".js-show-tag").on("click", function(evt) { showTag(evt) })
+$(".js-hide-tag").on("click", function(evt) { hideTag(evt) })
+$(".js-delete-data").on("click", function(evt) { deleteData(evt) })
 
 function showTag(evt) {
 	const $evt = $(evt.currentTarget)
@@ -30,13 +30,14 @@ if(document.getElementById("editor")) {
 	const editor = new E('#toolbar', '#editor');
 	editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
 	editor.create();
-	$(".js-put-form").off().on("submit", evt => this.putFormSubmit(evt, editor));
+	$(".js-put-form").off().on("submit", function(evt) { putFormSubmit(evt, editor) });
 } else if($(".js-put-form")) {
-	$(".js-put-form").off().on("submit", evt => this.putFormSubmit(evt));
+	$(".js-put-form").off().on("submit", function(evt) { putFormSubmit(evt) });
 }
 
+
 // 新增信息
-function putFormSubmit(evt, editor = '') {
+function putFormSubmit(evt, editor) {
 	evt.preventDefault();
 	const data = $(evt.currentTarget).serializeObject();
 	if(editor) data.editor = editor.txt.html();
@@ -47,9 +48,9 @@ function putFormSubmit(evt, editor = '') {
 	data.typeName = JSON.parse(type) === 4 ? $("select[name=typeId] option:selected").text() : data.typeName || '';
 	const url = getUrl(data, type);
 	$.ajax({
-		url,
-		method,
-		success: () => {
+		url: url,
+		method: method,
+		success: function() {
 			window.location.href = "/admin"
 		}
 	})
@@ -58,10 +59,10 @@ function putFormSubmit(evt, editor = '') {
 function getUrl(data, type) {
 	let url = "";
 	switch(JSON.parse(type)) {
-		case 1: url = `/api/new?id=${data.id}&title=${data.title}&createdAt=${data.createdAt}&creator=${data.creator}&content=${data.content}`; break;
-		case 2: url = `/api/offer?id=${data.id}&position=${data.position}&contact=${data.contact}&local=${data.local}&content=${data.content}`; break;
-		case 3: url = `/api/product/type?id=${data.id}&typeName=${data.typeName}`; break;
-		case 4: url = `/api/product?id=${data.id}&name=${data.name}&createdAt=${data.createdAt}&function=${data.function}&themeImg=${data.themeImg}&type=${data.type}&typeName=${data.typeName}&content=${data.content}`; break;
+		case 1: url = "/api/new?id="+data.id+"&title="+encodeURIComponent(data.title)+"&createdAt="+data.createdAt+"&creator="+encodeURIComponent(data.creator)+"&content="+encodeURIComponent(data.content); break;
+		case 2: url = "/api/offer?id="+data.id+"&position="+encodeURIComponent(data.position)+"&contact="+encodeURIComponent(data.contact)+"&local="+encodeURIComponent(data.local)+"&content="+encodeURIComponent(data.content); break;
+		case 3: url = "/api/product/type?id="+data.id+"&typeName="+encodeURIComponent(data.typeName); break;
+		case 4: url = "/api/product?id="+data.id+"&name="+encodeURIComponent(data.name)+"&createdAt="+data.createdAt+"&function="+encodeURIComponent(data.function)+"&themeImg="+encodeURIComponent(data.themeImg)+"&type="+data.type+"&typeName="+encodeURIComponent(data.typeName)+"&content="+encodeURIComponent(data.content); break;
 		default: url = '';
 	}
 	return url;
@@ -74,15 +75,15 @@ function deleteData(evt) {
 	const type = $(".js-delete-type").val();
 	let url = '';
 	switch(JSON.parse(type)) {
-		case 1: url = '/api/new'; break;
-		case 2: url = '/api/offer'; break;
-		case 4: url = '/api/product'; break;
+		case 1: url = '/api/new/'; break;
+		case 2: url = '/api/offer/'; break;
+		case 4: url = '/api/product/'; break;
 		default: url = '';
 	}
 	$.ajax({
-		url: `${url}/${id}`,
+		url: url+id,
 		method: "DELETE",
-		success: (data) => {
+		success: function(data) {
 			window.location.reload();
 		}
 	})
