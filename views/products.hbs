@@ -19,12 +19,18 @@
                 <a href="/products/{{id}}" class="product-detail">
                   <img src="{{themeImg}}" alt="产品主题图">
                   <div class="product-content">
+                    <div class="product-name">{{name}}</div>
                     <div class="product-desc">{{function}}</div>
                     <div class="product-time">{{formatDate createdAt "YYYY-MM-DD"}}</div>
                   </div>
                 </a>
               {{/equals}}
             {{/each}}
+            {{#findFull ../products id}}
+                <a href="javascript:;" class="no-product product-detail">
+                  <div>该分类下暂无产品！</div>
+                </a>
+            {{/findFull}}
           </div>
         {{/each}}
       </div>

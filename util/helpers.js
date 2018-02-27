@@ -53,6 +53,20 @@ const helpers = {
 
 	decode: function(val, options) {
 		return decodeURIComponent(val);
+	},
+
+	findFull: function(val, typeId, options) {
+		var i = 0;
+		for(var j = 0; j < val.length; j++) {
+			if(JSON.stringify(val[j].type) == typeId) {
+				i++;
+			}
+		}
+		if(i == 0) {
+			return options.fn(this);
+		} else {
+			return options.inverse(this);
+		}
 	}
 }
 

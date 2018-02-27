@@ -113,6 +113,26 @@ i.icon-tubiao_Axinwengonggao {
         width: 60px;
         height: 50px;
     }
+
+    .site-header .col-xs-7 {
+        width: 100%;
+    }
+
+    .site-header .logo .company-name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 322px) {
+    .site-header {
+        padding: 3px 0;
+    }
+}
+
+@media (max-width: 260px) {
+    .site-header .logo .company-name {
+        font-size: 1.8rem;
+    }
 }
 
 .site-header .contact-way {
@@ -147,6 +167,12 @@ i.icon-tubiao_Axinwengonggao {
 @media (max-width: 768px) {
     .site-nav {
         height: 31px;
+    }
+}
+
+@media (max-width: 333px) {
+    .site-nav {
+        height: 60px;
     }
 }
 
@@ -597,6 +623,14 @@ i.icon-tubiao_Axinwengonggao {
     padding: 10px;
     border: 1px solid #ccc;
     position: relative;
+    margin-bottom: 5px;
+}
+
+.products .no-product {
+    height: 100px;
+    line-height: 80px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .products .product-detail:hover {
@@ -613,9 +647,14 @@ i.icon-tubiao_Axinwengonggao {
     display: inline-block;
 }
 
+.products .product-detail .product-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
 .products .product-detail .product-desc {
     margin-top: 10px;
-    max-height: 130px;
+    max-height: 110px;
     overflow: hidden;
 }
 
@@ -648,4 +687,8 @@ i.icon-tubiao_Axinwengonggao {
 
 .products-detail .detail-extra {
     padding: 20px;
+}
+
+.products-detail .w-e-text, .news-detail .w-e-text {
+    overflow-y: auto; 
 }

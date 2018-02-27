@@ -28,7 +28,7 @@ function hideTag(evt) {
 if(document.getElementById("editor")) {
 	const E = window.wangEditor;
 	const editor = new E('#toolbar', '#editor');
-	editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
+	// editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
 	editor.create();
 	$(".js-put-form").off().on("submit", function(evt) { putFormSubmit(evt, editor) });
 } else if($(".js-put-form")) {
