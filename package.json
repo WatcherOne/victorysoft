@@ -14,7 +14,7 @@
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
     "http-proxy-middleware": "^0.17.4",
-    "moment": "^2.20.1",
+    "moment": "^2.29.2",
     "path": "^0.12.7",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
